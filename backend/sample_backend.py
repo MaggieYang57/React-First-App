@@ -49,7 +49,7 @@ def get_user(id):
                return user
             elif request.method == 'DELETE':
                users['users_list'].remove(user)
-               return jsonify(success=True)
+               return jsonify(), 204
       resp = jsonify({"Msg": "User not found."}), 404
       return resp
 
