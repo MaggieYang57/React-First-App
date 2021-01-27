@@ -38,7 +38,7 @@ function MyApp() {
 
   async function removeOneCharacter (index) {
     try {
-      const response = await axios.delete('http://localhost:5000/users/'+characters[index].id);
+      const response = await axios.delete('http://localhost:5000/users/'+characters[index]._id);
       if (response.status === 204)
       {
         const updated = characters.filter((character, i) => {
